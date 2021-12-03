@@ -1,5 +1,4 @@
 from urllib import request
-from Day3 import Day
 
 day = 3
 
@@ -19,6 +18,7 @@ try:
 except BaseException as ex:
     print("Input not retrieved\n")
 
+Day = getattr(__import__("Day" + str(day)), "Day")
 day = Day(day_input)
 
 day.part1()
