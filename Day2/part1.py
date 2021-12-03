@@ -1,5 +1,5 @@
 def run():
-    day_input = open("Day2/day2input.txt", "r")
+    day_input = open("Day2/input.txt", "r")
     depth = 0
     position = 0
 
@@ -13,4 +13,4 @@ def run():
             case "down":
                 depth += int(action[1])
 
-    print(depth * position)
+    print("Part 1: " + str(depth * position))

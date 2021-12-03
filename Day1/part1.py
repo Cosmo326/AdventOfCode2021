@@ -1,5 +1,5 @@
 def run():
-    day_input = open("day1input.txt", "r")
+    day_input = open("Day1/input.txt", "r")
     last = 0
     increasing = 0
 
@@ -11,3 +11,5 @@ def run():
             if last < current:
                 increasing += 1
             last = current
+
+    print("Part 1: " + increasing)

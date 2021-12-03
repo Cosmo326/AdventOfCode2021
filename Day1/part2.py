@@ -1,4 +1,4 @@
-def _get_increasing(array):
+def __get_increasing(array):
     first = array[0] + array[1] + array[2]
     last = array[1] + array[2] + array[3]
 
@@ -8,7 +8,7 @@ def _get_increasing(array):
 
 
 def run():
-    day_input = open("Day1/day1input.txt", "r")
+    day_input = open("Day1/input.txt", "r")
     array = []
     increasing = 0
 
@@ -16,7 +16,7 @@ def run():
         current = int(line)
         array.append(current)
         if len(array) == 4:
-            increasing += _get_increasing(array)
+            increasing += __get_increasing(array)
             array.pop(0)
 
-    print(increasing)
+    print("Part 2: " + increasing)
