@@ -1,6 +1,4 @@
 class BaseDay:
-    day_input = None
-
     def __init__(self, input_array):
         self.day_input = input_array
 
