@@ -1,14 +1,14 @@
-class Day:
+from Day import BaseDay
+
+
+class Day(BaseDay):
     day_input = None
 
-    def __init__(self, input_array=None):
-        self.day_input = input_array
-
-    def __is_valid(self):
-        return self.day_input is not None
+    def __init__(self, input_array):
+        super().__init__(input_array)
 
     def part1(self):
-        if not self.__is_valid():
+        if not self.is_valid():
             return
 
         depth = 0
@@ -27,7 +27,7 @@ class Day:
         print("Part 1: " + str(depth * position))
 
     def part2(self):
-        if not self.__is_valid():
+        if not self.is_valid():
             return
 
         depth = 0

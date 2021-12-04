@@ -1,15 +1,13 @@
-class Day:
-    day_input = None
+from Day import BaseDay
 
-    def __init__(self, input_array=None):
-        self.day_input = input_array
-        # self.day_input = ["00100","11110","10110","10111","10101","01111","00111","11100","10000","11001","00010","01010"]
 
-    def __is_valid(self):
-        return self.day_input is not None
+class Day(BaseDay):
+    def __init__(self, input_array):
+        super().__init__(input_array)
+        # self.__init__(["00100","11110","10110","10111","10101","01111","00111","11100","10000","11001","00010","01010"])
 
     def part1(self):
-        if not self.__is_valid():
+        if not self.is_valid():
             return
 
         epsilon = ""
@@ -41,7 +39,7 @@ class Day:
         print("Part 1: " + str(epsilon_value * gamma_value))
 
     def part2(self):
-        if not self.__is_valid():
+        if not self.is_valid():
             return
 
         oxygen = self.get_rating(self.day_input, 0, "O")
