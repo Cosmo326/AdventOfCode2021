@@ -8,13 +8,13 @@ class Day:
         return self.day_input is not None
 
     def part1(self):
-        if self.__is_valid():
+        if not self.__is_valid():
             return
 
         print("Part 1: Not Complete")
 
     def part2(self):
-        if self.__is_valid():
+        if not self.__is_valid():
             return
 
         print("Part 2: Not Complete")
