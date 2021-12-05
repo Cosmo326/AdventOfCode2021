@@ -7,9 +7,6 @@ class Day(BaseDay):
         # self.__init__(["00100","11110","10110","10111","10101","01111","00111","11100","10000","11001","00010","01010"])
 
     def part1(self):
-        if not self.is_valid():
-            return
-
         epsilon = ""
         gamma = ""
         commonality = []
@@ -36,12 +33,9 @@ class Day(BaseDay):
 
         # print("Epsilon: " + str(epsilon) + " = " + str(epsilon_value))
         # print("Gamma: " + str(gamma) + " = " + str(gamma_value))
-        print("Part 1: " + str(epsilon_value * gamma_value))
+        return epsilon_value * gamma_value
 
     def part2(self):
-        if not self.is_valid():
-            return
-
         oxygen = self.get_rating(self.day_input, 0, "O")
         oxygen_value = int(oxygen, 2)
         scrubber = self.get_rating(self.day_input, 0, "CO2")
@@ -49,7 +43,7 @@ class Day(BaseDay):
 
         # print("Oxygen Generator Rating: " + str(oxygen) + " = " + str(oxygen_value))
         # print("CO2 Scrubber Rating: " + str(scrubber) + " = " + str(scrubber_value))
-        print("Part 2: " + str(oxygen_value * scrubber_value))
+        return oxygen_value * scrubber_value
 
     def get_rating(self, array, index, rating):
         if len(array) == 1:

@@ -8,9 +8,6 @@ class Day(BaseDay):
         super().__init__(input_array)
 
     def part1(self):
-        if not self.is_valid():
-            return
-
         last = 0
         increasing = 0
 
@@ -23,12 +20,9 @@ class Day(BaseDay):
                     increasing += 1
                 last = current
 
-        print("Part 1: " + str(increasing))
+        return increasing
 
     def part2(self):
-        if not self.__is_valid():
-            return
-
         array = []
         increasing = 0
 
@@ -39,7 +33,7 @@ class Day(BaseDay):
                 increasing += self.__get_increasing(array)
                 array.pop(0)
 
-        print("Part 2: " + str(increasing))
+        return increasing
 
     @staticmethod
     def __get_increasing(array):

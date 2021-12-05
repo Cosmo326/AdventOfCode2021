@@ -1,6 +1,6 @@
 from urllib import request
 
-day = 4
+day = 5
 
 print("Running Day " + str(day))
 
@@ -21,7 +21,7 @@ except BaseException as ex:
 Day = getattr(__import__("Day" + str(day)), "Day")
 day = Day(day_input)
 
-day.part1()
-day.part2()
+print("Part 1: " + str(day.part1()))
+print("Part 2: " + str(day.part2()))
 
 

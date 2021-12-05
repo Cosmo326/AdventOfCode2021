@@ -8,9 +8,6 @@ class Day(BaseDay):
         super().__init__(input_array)
 
     def part1(self):
-        if not self.is_valid():
-            return
-
         depth = 0
         position = 0
 
@@ -24,12 +21,9 @@ class Day(BaseDay):
                 case "down":
                     depth += int(action[1])
 
-        print("Part 1: " + str(depth * position))
+        return depth * position
 
     def part2(self):
-        if not self.is_valid():
-            return
-
         depth = 0
         position = 0
         aim = 0
@@ -45,5 +39,5 @@ class Day(BaseDay):
                 case "down":
                     aim += int(action[1])
 
-        print("Part 2: " + str(depth * position))
+        return depth * position
 

@@ -38,8 +38,7 @@ class Day(BaseDay):
             for board in boards:
                 score = board.mark(int(number))
                 if score != -1:
-                    print("Part 1: " + str(score))
-                    return
+                    return score
 
     def part2(self):
         selected = self.day_input[0].split(",")
@@ -66,7 +65,7 @@ class Day(BaseDay):
                     skipped_boards.append(board)
                     last_score = score
 
-        print("Part 2: " + str(last_score))
+        return last_score
 
 
 class BingoBoard:
