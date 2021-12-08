@@ -1,6 +1,6 @@
 from urllib import request
 
-day = 6
+day = 7
 
 print("Running Day " + str(day))
 
